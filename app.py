@@ -11,7 +11,7 @@ with open('phone_addiction_model.pkl', 'rb') as file:
 import streamlit as st
 
 # Add a title with reduced font size
-st.markdown("<h1 style='text-align: center; font-size: 30px;'>📱 Smartphone Addiction Predictor</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size: 40px;'>📱 Smartphone Addiction Predictor</h1>", unsafe_allow_html=True)
 
 
 # Instructions
