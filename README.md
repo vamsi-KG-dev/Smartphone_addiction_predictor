@@ -40,7 +40,7 @@ This project predicts smartphone addiction levels using a machine learning model
    
             streamlit run app.py
 
-5. **Open your browser and navigate to http://localhost:8501.**
+5. **Open your browser**
 
 
          🌐 Live Demo
