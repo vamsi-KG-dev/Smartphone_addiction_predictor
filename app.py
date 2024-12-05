@@ -6,8 +6,7 @@ with open('phone_addiction_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Streamlit app title using HTML for inline styling
-st.markdown("""
-    <h1 📱 Smartphone Addiction Predictor</h1>""")
+st.markdown("""📱 Smartphone Addiction Predictor""")
 
 # Instructions
 st.subheader("Choose either 1 (Yes) or 0 (No):")
