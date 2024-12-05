@@ -8,9 +8,10 @@ with open('phone_addiction_model.pkl', 'rb') as file:
 # Streamlit app title using HTML for inline styling
 # Add a title
 # Adjust line height for better wrapping
-# Break the title into two lines
-st.write("### 📱 Smartphone Addiction")
-st.write("### Predictor")
+import streamlit as st
+
+# Add a title with reduced font size
+st.markdown("<h1 style='text-align: center; font-size: 24px;'>📱 Smartphone Addiction Predictor</h1>", unsafe_allow_html=True)
 
 
 # Instructions
