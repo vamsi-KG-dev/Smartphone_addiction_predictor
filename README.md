@@ -41,10 +41,13 @@ This project predicts smartphone addiction levels using a machine learning model
             streamlit run app.py
 
 5. **Open your browser**
-
-
+ 🌐 Live Demo
+         View the live app here: [https://smartphoneaddictionpredictor-5pqtekfsupmspc7pxncubb.streamlit.app/]
+Email: [vamcyadav25@gmail.com]
+LinkedIn: https://www.linkedin.com/in/vamsi-krishna-yadav
+GitHub: github.com/vamsi-KG-dev
          🌐 Live Demo
-         View the live app here: 'https://smartphoneaddictionpredictor-5pqtekfsupmspc7pxncubb.streamlit.app/'
+         View the live app here: ''
 
 
 
