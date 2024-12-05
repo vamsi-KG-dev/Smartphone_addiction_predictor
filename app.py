@@ -12,7 +12,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Instructions
-st.subheader("<h1>Choose either 1 (Yes) or 0 (No):</h1>")
+st.subheader(<h1>Choose either 1 (Yes) or 0 (No):</h1>)
 
 # Collecting user input for the features using selectbox
 q1 = st.selectbox("Do you use your phone to click pictures of class notes?", [1, 0])
