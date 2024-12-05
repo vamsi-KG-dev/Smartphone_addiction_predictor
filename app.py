@@ -11,11 +11,14 @@ with open('phone_addiction_model.pkl', 'rb') as file:
 import streamlit as st
 
 # Add a title with reduced font size
-st.markdown("<h1 style='text-align: center; font-size: 24px;'>📱 Smartphone Addiction Predictor</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-size: 30px;'>📱 Smartphone Addiction Predictor</h1>", unsafe_allow_html=True)
 
 
 # Instructions
-st.subheader("Choose either 1 (Yes) or 0 (No):")
+st.markdown(
+    "<h4 style='font-size:16px;'>Choose either 1 (Yes) or 0 (No):</h4>", 
+    unsafe_allow_html=True
+)
 
 # Collecting user input for the features using selectbox
 q1 = st.selectbox("Do you use your phone to click pictures of class notes?", [1, 0])
