@@ -44,7 +44,8 @@ This project predicts smartphone addiction levels using a machine learning model
 
    
     🌐 Live Demo
-         View the live app here: [https://smartphoneaddictionpredictor-5pqtekfsupmspc7pxncubb.streamlit.app/]
+   
+     View the live app here: [https://smartphoneaddictionpredictor-5pqtekfsupmspc7pxncubb.streamlit.app/]
 
 
 
