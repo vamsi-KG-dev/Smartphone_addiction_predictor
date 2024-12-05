@@ -29,22 +29,22 @@ This project predicts smartphone addiction levels using a machine learning model
 
 1. **Clone the Repository**:
    
-      git clone https://github.com/vamsi-KG-dev/your-repository-name.git
-      cd your-repository-name
+         git clone https://github.com/vamsi-KG-dev/your-repository-name.git
+         cd your-repository-name
    
 3. **Install Dependencies: Make sure you have Python installed, then run**:
 
-     pip install -r requirements.txt
+           pip install -r requirements.txt
 
 3. **Run the App**:
-     streamlit run app.py
+   
+            streamlit run app.py
 
-4. **Open your browser and navigate to http://localhost:8501.**
+5. **Open your browser and navigate to http://localhost:8501.**
 
 
-
-🌐 Live Demo
-View the live app here: 'https://smartphoneaddictionpredictor-5pqtekfsupmspc7pxncubb.streamlit.app/'
+         🌐 Live Demo
+         View the live app here: 'https://smartphoneaddictionpredictor-5pqtekfsupmspc7pxncubb.streamlit.app/'
 
 
 
