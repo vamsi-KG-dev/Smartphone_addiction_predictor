@@ -16,7 +16,7 @@ st.markdown("<h1 style='text-align: center; font-size: 30px;'>📱 Smartphone Ad
 
 # Instructions
 st.markdown(
-    "<h4 style='font-size:16px;'>Choose either 1 (Yes) or 0 (No):</h4>", 
+    "<h4 style='font-size:18px;'>Choose either 1 (Yes) or 0 (No):</h4>", 
     unsafe_allow_html=True
 )
 
