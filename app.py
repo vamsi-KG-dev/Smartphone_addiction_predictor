@@ -7,7 +7,19 @@ with open('phone_addiction_model.pkl', 'rb') as file:
 
 # Streamlit app title using HTML for inline styling
 # Add a title
-st.title("📱 Smartphone Addiction Predictor")
+# Adjust line height for better wrapping
+st.markdown(
+    """
+    <style>
+    h1 {
+        line-height: 1.5;
+    }
+    </style>
+    <h1 style='text-align: center;'>📱 Smartphone Addiction Predictor</h1>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # Instructions
 st.subheader("Choose either 1 (Yes) or 0 (No):")
