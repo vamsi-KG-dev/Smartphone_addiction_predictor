@@ -7,7 +7,7 @@ with open('phone_addiction_model.pkl', 'rb') as file:
 
 # Streamlit app title using HTML for inline styling
 st.markdown("""
-    <h1 style="display: inline;">📱 Smartphone Addiction Predictor</h1>
+    <h1 📱 Smartphone Addiction Predictor</h1>
    
 """, unsafe_allow_html=True)
 
