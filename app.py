@@ -1,18 +1,18 @@
     
 import streamlit as st
 import pickle
+import pandas as pd
 
 # Load the trained model
 with open('phone_addiction_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
-# Streamlit app title using HTML for inline styling
+# Streamlit app title using HTML for inline styling with smaller font size
 st.markdown("""
-    <h1 style="display: inline; font-size: 35px;">📱 Smartphone Addiction Predictor</h1>
+    <h1 style="display: inline; font-size: 36px;">📱 Smartphone Addiction Predictor</h1>
 """, unsafe_allow_html=True)
 
-
-# Instructions
+# Instructions with smaller font size for subheader
 st.markdown("""
     <h3 style="font-size: 18px;">Choose either 1 (Yes) or 0 (No):</h3>
 """, unsafe_allow_html=True)
@@ -28,7 +28,7 @@ q6 = st.selectbox("Do you take your phone to the bathroom?", [1, 0])
 # Collect responses in a list
 input_features = [q1, q2, q3, q4, q5, q6]
 
-# Sidebar About button and details
+# Sidebar buttons and details
 if st.sidebar.button("About"):
     st.sidebar.markdown("""
     ## 📱 Smartphone Addiction Predictor
@@ -52,8 +52,7 @@ if st.sidebar.button("About"):
     The goal is to help individuals understand their phone usage patterns and the potential impact of excessive screen time on their daily lives. It can be used as a tool for self-awareness or to guide recommendations for healthier smartphone habits.
     """)
 
-# Sidebar Algorithm Used button and details
-if st.sidebar.button("Algorithm Used"):
+elif st.sidebar.button("Algorithm Used"):
     st.sidebar.markdown("""
     ## Logistic Regression Algorithm
 
@@ -67,6 +66,13 @@ if st.sidebar.button("Algorithm Used"):
     ### Why Logistic Regression:
     Logistic regression is simple, interpretable, and effective for binary classification tasks like this one. It also provides probabilities, which can be useful for understanding the confidence level of predictions.
     """)
+
+elif st.sidebar.button("Dataset"):
+    # Load your dataset (replace 'Smart_phone_addiction.csv' with your actual file path)
+    df = pd.read_csv('Smart_phone_addiction.csv')
+    
+    # Show the dataset as a table
+    st.dataframe(df)
 
 # Display the result with increased text size and box size
 if st.button("Predict"):
