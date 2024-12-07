@@ -28,8 +28,14 @@ q6 = st.selectbox("Do you take your phone to the bathroom?", [1, 0])
 # Collect responses in a list
 input_features = [q1, q2, q3, q4, q5, q6]
 
-# Sidebar buttons and details
-if st.sidebar.button("About"):
+# Sidebar setup with all buttons visible
+with st.sidebar:
+    about_button = st.button("About")
+    algorithm_button = st.button("Algorithm Used")
+    dataset_button = st.button("Dataset")
+
+# Display content based on which button is clicked
+if about_button:
     st.sidebar.markdown("""
     ## 📱 Smartphone Addiction Predictor
     This project leverages machine learning to predict whether a person is likely addicted to their smartphone based on their usage patterns. The features used for prediction are based on common behaviors that may indicate smartphone addiction.
@@ -52,7 +58,7 @@ if st.sidebar.button("About"):
     The goal is to help individuals understand their phone usage patterns and the potential impact of excessive screen time on their daily lives. It can be used as a tool for self-awareness or to guide recommendations for healthier smartphone habits.
     """)
 
-elif st.sidebar.button("Algorithm Used"):
+elif algorithm_button:
     st.sidebar.markdown("""
     ## Logistic Regression Algorithm
 
@@ -67,7 +73,7 @@ elif st.sidebar.button("Algorithm Used"):
     Logistic regression is simple, interpretable, and effective for binary classification tasks like this one. It also provides probabilities, which can be useful for understanding the confidence level of predictions.
     """)
 
-elif st.sidebar.button("Dataset"):
+elif dataset_button:
     # Load your dataset (replace 'Smart_phone_addiction.csv' with your actual file path)
     df = pd.read_csv('Smart_phone_addiction.csv')
     
