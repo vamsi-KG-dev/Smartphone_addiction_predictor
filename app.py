@@ -1,7 +1,33 @@
-    
 import streamlit as st
 import pickle
 import pandas as pd
+
+# Apply custom CSS for background image (kept for background only)
+background_image_url = "https://images.pexels.com/photos/18236753/pexels-photo-18236753/free-photo-of-jabra-elite-85t-wireless-bluetooth.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  # Replace with your image URL
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("{background_image_url}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+    }}
+    /* Custom CSS for increased input field size */
+    .stSelectbox select {{
+        font-size: 50px;  /* Increase font size */
+        padding: 12px;    /* Increase padding */
+        width: 100%;      /* Make it expand to the width of the container */
+    }}
+    .st-selectbox label {{
+        font-size: 50px;  /* Increase font size for question label */
+        font-weight: bold; /* Make text bold */
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Load the trained model
 with open('phone_addiction_model.pkl', 'rb') as file:
@@ -9,12 +35,12 @@ with open('phone_addiction_model.pkl', 'rb') as file:
 
 # Streamlit app title using HTML for inline styling with smaller font size
 st.markdown("""
-    <h1 style="display: inline; font-size: 36px;">📱 Smartphone Addiction Predictor</h1>
+    <h1 style="display: inline; font-size: 36px; color: white;">📱 Smartphone Addiction Predictor</h1>
 """, unsafe_allow_html=True)
 
 # Instructions with smaller font size for subheader
 st.markdown("""
-    <h3 style="font-size: 18px;">Choose either 1 (Yes) or 0 (No):</h3>
+    <h3 style="font-size: 18px; color: white;">Choose either 1 (Yes) or 0 (No):</h3>
 """, unsafe_allow_html=True)
 
 # Collecting user input for the features using selectbox
@@ -70,14 +96,12 @@ elif algorithm_button:
     - **Prediction**: Once trained, the model can predict the likelihood of addiction based on the input features provided by the user.
 
     ### Why Logistic Regression:
-    Logistic regression is simple, interpretable, and effective for binary classification tasks like this one. It also provides probabilities, which can be useful for understanding the confidence level of predictions.
+    Logistic regression is simple, interpretable, and effective for binary classification problems. It helps to determine the likelihood of an outcome based on a given set of inputs, which makes it well-suited for this addiction prediction task.
     """)
 
 elif dataset_button:
     # Load your dataset (replace 'Smart_phone_addiction.csv' with your actual file path)
     df = pd.read_csv('Smart_phone_addiction.csv')
-    
-    # Show the dataset as a table
     st.dataframe(df)
 
 # Display the result with increased text size and box size
@@ -88,13 +112,13 @@ if st.button("Predict"):
     # Customize the result box color and text size
     if prediction == 1:
         st.markdown("""
-        <div style="font-size: 24px; padding: 20px; background-color: white; color: black; border-radius: 10px;">
+        <div style="font-size: 24px; padding: 20px; background-color: rgba(255, 0, 0, 0.8); color: white; border-radius: 10px;">
             🔴 You are likely addicted to your smartphone.
         </div>
         """, unsafe_allow_html=True)
     else:
         st.markdown("""
-        <div style="font-size: 24px; padding: 20px; background-color: white; color: black; border-radius: 10px;">
+        <div style="font-size: 24px; padding: 20px; background-color: rgba(0, 255, 0, 0.8); color: white; border-radius: 10px;">
             🟢 You are not addicted to your smartphone.
         </div>
         """, unsafe_allow_html=True)
